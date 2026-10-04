@@ -1,0 +1,20 @@
+# 机映 RoboReflex M1 示例场景：平面挡板接球（简单档）
+# 所有分布区间均为闭区间均匀采样；随机种子由调用方（env.reset(seed=...)）传入。
+name: ball_catch_easy
+
+launch:
+  delay_range: [0.2, 0.8]     # 复位后延迟发球时间窗口（秒），用于测"无球期误触发"
+  speed_range: [2.0, 3.5]     # 初速（m/s）
+  angle_range: [-30, 30]      # 水平角度（度）：x-z 平面内相对竖直向下的偏角，正朝 +x
+  spawn_height: 1.5           # 发球固定高度（米）
+  spawn_x_range: [-0.4, 0.4]  # 发球点 x 随机偏移（米）
+
+paddle:
+  max_speed: 6.0              # 挡板目标速度上限（m/s），动作空间 [-max, +max]
+  x_limit: 0.95               # 策略侧拦截点裁剪范围（略小于关节限位 ±1.0）
+
+catch_height: 0.17            # 期望接球时球心高度 ≈ 挡板顶面(0.12) + 球半径(0.05)
+fail_z: 0.03                  # 球心低于此高度判定落地失败（兜底，正常由地板碰撞触发）
+max_episode_time: 6.0         # 单次试验最长仿真时间（秒）
+false_trigger_threshold: 0.02 # 无球期挡板位移超过此值（米）记一次误触发
+action_threshold: 0.1         # "首次有效动作"判定阈值（m/s），防纹丝不动骗时间戳

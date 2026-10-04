@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# 训练产物（太大不入库，模型走 Release）
+runs/
+*.zip
+*.pkl
+
+# 敏感
+*.dpapi
+*.enc
+.env
+*.key
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 中间产物
+html_backup/
+*.log

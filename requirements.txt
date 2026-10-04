@@ -1,0 +1,9 @@
+mujoco>=3.2
+gymnasium>=0.29
+stable-baselines3>=2.3
+torch>=2.4
+pyyaml>=6.0
+matplotlib>=3.8
+numpy>=1.26
+imageio>=2.31
+pytest>=8.0

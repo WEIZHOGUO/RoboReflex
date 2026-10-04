@@ -1,0 +1,1442 @@
+{
+  "summary": {
+    "n_trials": 100,
+    "n_success": 100,
+    "success_rate": 1.0,
+    "false_trigger_rate": 0.0,
+    "reaction_sim_s": {
+      "mean": 0.011298969072164957,
+      "p50": 0.01200000000000001,
+      "p95": 0.020000000000000018,
+      "p99": 0.020000000000000018,
+      "min": 0.0020000000000000018,
+      "max": 0.020000000000000018
+    },
+    "reaction_wall_s": {
+      "mean": 0.00015912164948453608,
+      "p50": 0.0001454,
+      "p95": 0.00025089999999999997,
+      "p99": 0.000360775999999996,
+      "min": 4.39e-05,
+      "max": 0.000845
+    },
+    "obs_ready_wall_s": {
+      "mean": 0.000122676,
+      "p50": 0.0001128,
+      "p95": 0.00020786,
+      "p99": 0.00027768400000000243,
+      "min": 2.3e-05,
+      "max": 0.0007414
+    },
+    "flight_time_s": {
+      "mean": 0.3143200000000002,
+      "p50": 0.31200000000000017,
+      "p95": 0.3541000000000002,
+      "p99": 0.3581200000000004,
+      "min": 0.2760000000000002,
+      "max": 0.3700000000000002
+    }
+  },
+  "trials": [
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.020000000000000018,
+      "reaction_wall_s": 0.000845,
+      "obs_ready_wall_s": 0.0007414,
+      "flight_time_s": 0.29200000000000026,
+      "launch_spec": {
+        "speed": 3.1609340728339452,
+        "angle_deg": -3.6672936148768613,
+        "launch_delay": 0.6184208174356185
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.016000000000000014,
+      "reaction_wall_s": 0.0003406,
+      "obs_ready_wall_s": 0.000273,
+      "flight_time_s": 0.31800000000000017,
+      "launch_spec": {
+        "speed": 2.978448894051366,
+        "angle_deg": -27.373480581660203,
+        "launch_delay": 0.703527549506618
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.018000000000000016,
+      "reaction_wall_s": 0.0002549,
+      "obs_ready_wall_s": 0.000209,
+      "flight_time_s": 0.3500000000000002,
+      "launch_spec": {
+        "speed": 2.1838482645108073,
+        "angle_deg": -14.51321551363362,
+        "launch_delay": 0.7815103688866534
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.01200000000000001,
+      "reaction_wall_s": 0.0001207,
+      "obs_ready_wall_s": 9.06e-05,
+      "flight_time_s": 0.30600000000000027,
+      "launch_spec": {
+        "speed": 2.8596959854212587,
+        "angle_deg": 1.7094687102121675,
+        "launch_delay": 0.6870156602057642
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.006000000000000005,
+      "reaction_wall_s": 8.43e-05,
+      "obs_ready_wall_s": 5.25e-05,
+      "flight_time_s": 0.29800000000000026,
+      "launch_spec": {
+        "speed": 3.358406415035468,
+        "angle_deg": -25.366392407295407,
+        "launch_delay": 0.5731102893476798
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.016000000000000014,
+      "reaction_wall_s": 0.0001494,
+      "obs_ready_wall_s": 0.0001242,
+      "flight_time_s": 0.2980000000000002,
+      "launch_spec": {
+        "speed": 3.112702991963841,
+        "angle_deg": 15.220129027176469,
+        "launch_delay": 0.2622350177887352
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.0020000000000000018,
+      "reaction_wall_s": 5.06e-05,
+      "obs_ready_wall_s": 2.45e-05,
+      "flight_time_s": 0.3220000000000003,
+      "launch_spec": {
+        "speed": 2.5815498084283917,
+        "angle_deg": 5.746409401760403,
+        "launch_delay": 0.6166951424044416
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": null,
+      "reaction_wall_s": null,
+      "obs_ready_wall_s": 3.22e-05,
+      "flight_time_s": 0.3240000000000003,
+      "launch_spec": {
+        "speed": 2.5442812884142043,
+        "angle_deg": 5.593035610183939,
+        "launch_delay": 0.5742195714059681
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.014000000000000012,
+      "reaction_wall_s": 0.0001369,
+      "obs_ready_wall_s": 0.0001046,
+      "flight_time_s": 0.30000000000000016,
+      "launch_spec": {
+        "speed": 3.1811340378299353,
+        "angle_deg": 20.02016007501495,
+        "launch_delay": 0.7840694576840679
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.006000000000000005,
+      "reaction_wall_s": 6.41e-05,
+      "obs_ready_wall_s": 4.69e-05,
+      "flight_time_s": 0.2820000000000002,
+      "launch_spec": {
+        "speed": 3.413661794405625,
+        "angle_deg": -11.571698352675593,
+        "launch_delay": 0.3335711149941326
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.016000000000000014,
+      "reaction_wall_s": 0.0001411,
+      "obs_ready_wall_s": 0.000119,
+      "flight_time_s": 0.30400000000000016,
+      "launch_spec": {
+        "speed": 2.9236444322036492,
+        "angle_deg": 4.453577738117517,
+        "launch_delay": 0.2038337249018921
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.020000000000000018,
+      "reaction_wall_s": 0.0001831,
+      "obs_ready_wall_s": 0.0001538,
+      "flight_time_s": 0.3580000000000002,
+      "launch_spec": {
+        "speed": 2.0166904918463993,
+        "angle_deg": 13.134639226062056,
+        "launch_delay": 0.759853198172016
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.01200000000000001,
+      "reaction_wall_s": 0.0001202,
+      "obs_ready_wall_s": 0.0001003,
+      "flight_time_s": 0.3360000000000003,
+      "launch_spec": {
+        "speed": 2.333677317007843,
+        "angle_deg": 1.1147982529772236,
+        "launch_delay": 0.5464638258591503
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.020000000000000018,
+      "reaction_wall_s": 0.0002716,
+      "obs_ready_wall_s": 0.0002255,
+      "flight_time_s": 0.2980000000000002,
+      "launch_spec": {
+        "speed": 3.248378275182426,
+        "angle_deg": 22.238736702980475,
+        "launch_delay": 0.3380582903671733
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.0040000000000000036,
+      "reaction_wall_s": 5.4e-05,
+      "obs_ready_wall_s": 3.44e-05,
+      "flight_time_s": 0.3140000000000003,
+      "launch_spec": {
+        "speed": 3.08918907494531,
+        "angle_deg": -28.985831131281408,
+        "launch_delay": 0.6347625272742803
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.014000000000000012,
+      "reaction_wall_s": 0.0001492,
+      "obs_ready_wall_s": 0.00012,
+      "flight_time_s": 0.2980000000000002,
+      "launch_spec": {
+        "speed": 3.0262500547333127,
+        "angle_deg": -1.90128190694589,
+        "launch_delay": 0.40419188471521506
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.014000000000000012,
+      "reaction_wall_s": 0.0001353,
+      "obs_ready_wall_s": 0.0001071,
+      "flight_time_s": 0.34000000000000025,
+      "launch_spec": {
+        "speed": 2.4635177008493674,
+        "angle_deg": 22.790016553846257,
+        "launch_delay": 0.3250522793692155
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": null,
+      "reaction_wall_s": null,
+      "obs_ready_wall_s": 0.0001317,
+      "flight_time_s": 0.3140000000000002,
+      "launch_spec": {
+        "speed": 2.8816207379995467,
+        "angle_deg": 19.563970091930116,
+        "launch_delay": 0.4264577652054116
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.0040000000000000036,
+      "reaction_wall_s": 6.55e-05,
+      "obs_ready_wall_s": 3.71e-05,
+      "flight_time_s": 0.3440000000000002,
+      "launch_spec": {
+        "speed": 2.4864257190519146,
+        "angle_deg": -28.371216486299726,
+        "launch_delay": 0.794294912780928
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.014000000000000012,
+      "reaction_wall_s": 0.0001573,
+      "obs_ready_wall_s": 0.0001213,
+      "flight_time_s": 0.3280000000000003,
+      "launch_spec": {
+        "speed": 2.5615614243164617,
+        "angle_deg": 16.316137091535992,
+        "launch_delay": 0.6254929019243949
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.006000000000000005,
+      "reaction_wall_s": 0.0001131,
+      "obs_ready_wall_s": 8.01e-05,
+      "flight_time_s": 0.3080000000000002,
+      "launch_spec": {
+        "speed": 2.9139802502867473,
+        "angle_deg": 14.866398240910748,
+        "launch_delay": 0.3727131975671197
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.016000000000000014,
+      "reaction_wall_s": 0.0001732,
+      "obs_ready_wall_s": 0.0001445,
+      "flight_time_s": 0.3280000000000003,
+      "launch_spec": {
+        "speed": 2.8401190578433515,
+        "angle_deg": 29.535532131577426,
+        "launch_delay": 0.5031725673335701
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.008000000000000007,
+      "reaction_wall_s": 0.0001054,
+      "obs_ready_wall_s": 7.53e-05,
+      "flight_time_s": 0.2800000000000002,
+      "launch_spec": {
+        "speed": 3.4152401791106053,
+        "angle_deg": 1.400377748444562,
+        "launch_delay": 0.3911352668936894
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.0020000000000000018,
+      "reaction_wall_s": 9.41e-05,
+      "obs_ready_wall_s": 4.51e-05,
+      "flight_time_s": 0.35200000000000026,
+      "launch_spec": {
+        "speed": 2.0710872281952066,
+        "angle_deg": 1.093330652375208,
+        "launch_delay": 0.33720711398835684
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.0040000000000000036,
+      "reaction_wall_s": 6.64e-05,
+      "obs_ready_wall_s": 4.06e-05,
+      "flight_time_s": 0.28400000000000025,
+      "launch_spec": {
+        "speed": 3.385600816903897,
+        "angle_deg": 11.569087867459608,
+        "launch_delay": 0.5745522832587424
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.020000000000000018,
+      "reaction_wall_s": 0.0002058,
+      "obs_ready_wall_s": 0.0001798,
+      "flight_time_s": 0.33000000000000024,
+      "launch_spec": {
+        "speed": 2.6214972498533786,
+        "angle_deg": -22.383701867995455,
+        "launch_delay": 0.37834557308111477
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.0040000000000000036,
+      "reaction_wall_s": 7.67e-05,
+      "obs_ready_wall_s": 4.4e-05,
+      "flight_time_s": 0.3240000000000003,
+      "launch_spec": {
+        "speed": 2.7265500872698496,
+        "angle_deg": 20.899576473185142,
+        "launch_delay": 0.5757444645594565
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.018000000000000016,
+      "reaction_wall_s": 0.0002354,
+      "obs_ready_wall_s": 0.0002016,
+      "flight_time_s": 0.30600000000000027,
+      "launch_spec": {
+        "speed": 2.870558562823512,
+        "angle_deg": 1.6111221491667358,
+        "launch_delay": 0.6408562476864119
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.020000000000000018,
+      "reaction_wall_s": 0.00022,
+      "obs_ready_wall_s": 0.0001861,
+      "flight_time_s": 0.3260000000000002,
+      "launch_spec": {
+        "speed": 2.5711022678227144,
+        "angle_deg": 13.428351054720267,
+        "launch_delay": 0.7791343738367651
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.018000000000000016,
+      "reaction_wall_s": 0.0002138,
+      "obs_ready_wall_s": 0.0001751,
+      "flight_time_s": 0.3320000000000003,
+      "launch_spec": {
+        "speed": 2.380120516155954,
+        "angle_deg": 1.6523301387855476,
+        "launch_delay": 0.5808566375245833
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.010000000000000009,
+      "reaction_wall_s": 0.0001419,
+      "obs_ready_wall_s": 0.0001027,
+      "flight_time_s": 0.3080000000000002,
+      "launch_spec": {
+        "speed": 3.2567551017107,
+        "angle_deg": -29.59949263929544,
+        "launch_delay": 0.2685413267571902
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.008000000000000007,
+      "reaction_wall_s": 0.0001143,
+      "obs_ready_wall_s": 8.36e-05,
+      "flight_time_s": 0.31600000000000017,
+      "launch_spec": {
+        "speed": 2.7389542839322893,
+        "angle_deg": -11.797947728314185,
+        "launch_delay": 0.7910942878053218
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.018000000000000016,
+      "reaction_wall_s": 0.0002262,
+      "obs_ready_wall_s": 0.0001806,
+      "flight_time_s": 0.28200000000000025,
+      "launch_spec": {
+        "speed": 3.341567402658361,
+        "angle_deg": 1.2432570109151868,
+        "launch_delay": 0.6015193628756287
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.008000000000000007,
+      "reaction_wall_s": 0.0001584,
+      "obs_ready_wall_s": 0.0001129,
+      "flight_time_s": 0.3460000000000003,
+      "launch_spec": {
+        "speed": 2.3199375222892966,
+        "angle_deg": -20.812257190202843,
+        "launch_delay": 0.6105990552365866
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.006000000000000005,
+      "reaction_wall_s": 0.0001454,
+      "obs_ready_wall_s": 9.45e-05,
+      "flight_time_s": 0.3100000000000003,
+      "launch_spec": {
+        "speed": 3.2094972637362433,
+        "angle_deg": 29.131398370555516,
+        "launch_delay": 0.6325313040956143
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.018000000000000016,
+      "reaction_wall_s": 0.000194,
+      "obs_ready_wall_s": 0.0001707,
+      "flight_time_s": 0.2900000000000002,
+      "launch_spec": {
+        "speed": 3.1788984628137396,
+        "angle_deg": 3.0703173480189108,
+        "launch_delay": 0.4006719238867569
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.016000000000000014,
+      "reaction_wall_s": 0.0002144,
+      "obs_ready_wall_s": 0.000169,
+      "flight_time_s": 0.3320000000000002,
+      "launch_spec": {
+        "speed": 2.628294631745483,
+        "angle_deg": 24.90811822737014,
+        "launch_delay": 0.7022769223227756
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.018000000000000016,
+      "reaction_wall_s": 0.0002144,
+      "obs_ready_wall_s": 0.0001838,
+      "flight_time_s": 0.29600000000000015,
+      "launch_spec": {
+        "speed": 3.379403581065283,
+        "angle_deg": -25.70264359160913,
+        "launch_delay": 0.22144793658334544
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.0020000000000000018,
+      "reaction_wall_s": 6.6e-05,
+      "obs_ready_wall_s": 2.89e-05,
+      "flight_time_s": 0.3140000000000003,
+      "launch_spec": {
+        "speed": 3.1047369970151806,
+        "angle_deg": -28.89487219041574,
+        "launch_delay": 0.5568243375694952
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.01200000000000001,
+      "reaction_wall_s": 0.0001659,
+      "obs_ready_wall_s": 0.0001296,
+      "flight_time_s": 0.3240000000000003,
+      "launch_spec": {
+        "speed": 2.651169936658448,
+        "angle_deg": -17.30230062212822,
+        "launch_delay": 0.5662785426354351
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.010000000000000009,
+      "reaction_wall_s": 0.0002087,
+      "obs_ready_wall_s": 0.0001109,
+      "flight_time_s": 0.28600000000000014,
+      "launch_spec": {
+        "speed": 3.4964581285778973,
+        "angle_deg": 21.287276935589844,
+        "launch_delay": 0.7880872477754128
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.014000000000000012,
+      "reaction_wall_s": 0.0001759,
+      "obs_ready_wall_s": 0.0001466,
+      "flight_time_s": 0.34400000000000025,
+      "launch_spec": {
+        "speed": 2.4746214797765025,
+        "angle_deg": -27.32370841942529,
+        "launch_delay": 0.38448862308606124
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.008000000000000007,
+      "reaction_wall_s": 0.0001336,
+      "obs_ready_wall_s": 9.32e-05,
+      "flight_time_s": 0.30800000000000016,
+      "launch_spec": {
+        "speed": 3.0981473583918735,
+        "angle_deg": 24.012219763910096,
+        "launch_delay": 0.7303613286740398
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.011999999999999955,
+      "reaction_wall_s": 0.000175,
+      "obs_ready_wall_s": 0.0001346,
+      "flight_time_s": 0.35200000000000026,
+      "launch_spec": {
+        "speed": 2.066484486816499,
+        "angle_deg": -1.6938602701261551,
+        "launch_delay": 0.48684084419614665
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.016000000000000014,
+      "reaction_wall_s": 0.0001991,
+      "obs_ready_wall_s": 0.0001744,
+      "flight_time_s": 0.3120000000000002,
+      "launch_spec": {
+        "speed": 2.9231934774286756,
+        "angle_deg": -19.478745388085805,
+        "launch_delay": 0.42352646255497145
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": null,
+      "reaction_wall_s": null,
+      "obs_ready_wall_s": 0.0001099,
+      "flight_time_s": 0.3140000000000002,
+      "launch_spec": {
+        "speed": 2.85613464562298,
+        "angle_deg": 17.012358592154193,
+        "launch_delay": 0.48850697433390133
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.006000000000000005,
+      "reaction_wall_s": 0.00011,
+      "obs_ready_wall_s": 6.9e-05,
+      "flight_time_s": 0.3400000000000003,
+      "launch_spec": {
+        "speed": 2.3093679646847756,
+        "angle_deg": 12.19125327568866,
+        "launch_delay": 0.6133214438156384
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.008000000000000007,
+      "reaction_wall_s": 0.0001142,
+      "obs_ready_wall_s": 8.79e-05,
+      "flight_time_s": 0.31200000000000017,
+      "launch_spec": {
+        "speed": 2.8636657127150493,
+        "angle_deg": 16.196330379479136,
+        "launch_delay": 0.21179659680552615
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.008000000000000007,
+      "reaction_wall_s": 0.0001333,
+      "obs_ready_wall_s": 9.19e-05,
+      "flight_time_s": 0.32600000000000023,
+      "launch_spec": {
+        "speed": 2.558499169764871,
+        "angle_deg": 10.913826452052767,
+        "launch_delay": 0.45101012950567265
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.0040000000000000036,
+      "reaction_wall_s": 7.21e-05,
+      "obs_ready_wall_s": 4.58e-05,
+      "flight_time_s": 0.34400000000000025,
+      "launch_spec": {
+        "speed": 2.4246245865017535,
+        "angle_deg": 24.615058396324173,
+        "launch_delay": 0.3755155247844692
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.018000000000000016,
+      "reaction_wall_s": 0.0002362,
+      "obs_ready_wall_s": 0.0001938,
+      "flight_time_s": 0.32000000000000023,
+      "launch_spec": {
+        "speed": 2.901296444277643,
+        "angle_deg": -25.448888415098203,
+        "launch_delay": 0.4001689604581613
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.018000000000000016,
+      "reaction_wall_s": 0.0002171,
+      "obs_ready_wall_s": 0.0001808,
+      "flight_time_s": 0.2760000000000002,
+      "launch_spec": {
+        "speed": 3.4782355645283825,
+        "angle_deg": 2.59068867133913,
+        "launch_delay": 0.460878934653847
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.01200000000000001,
+      "reaction_wall_s": 0.0001566,
+      "obs_ready_wall_s": 0.0001292,
+      "flight_time_s": 0.3400000000000002,
+      "launch_spec": {
+        "speed": 2.359506388326804,
+        "angle_deg": 17.321582687648252,
+        "launch_delay": 0.2274667974318697
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.010000000000000009,
+      "reaction_wall_s": 0.0001355,
+      "obs_ready_wall_s": 0.0001025,
+      "flight_time_s": 0.32200000000000023,
+      "launch_spec": {
+        "speed": 2.8121847610861894,
+        "angle_deg": 24.798447993458005,
+        "launch_delay": 0.4283998728021607
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.00599999999999995,
+      "reaction_wall_s": 0.0001034,
+      "obs_ready_wall_s": 6.6e-05,
+      "flight_time_s": 0.2980000000000002,
+      "launch_spec": {
+        "speed": 3.0937535333774413,
+        "angle_deg": 14.033376194726301,
+        "launch_delay": 0.4938791307059256
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.01200000000000001,
+      "reaction_wall_s": 0.0001628,
+      "obs_ready_wall_s": 0.0001284,
+      "flight_time_s": 0.29800000000000015,
+      "launch_spec": {
+        "speed": 3.011410108582751,
+        "angle_deg": -4.061325340148166,
+        "launch_delay": 0.7870736111678109
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.0040000000000000036,
+      "reaction_wall_s": 7.59e-05,
+      "obs_ready_wall_s": 4.61e-05,
+      "flight_time_s": 0.2900000000000002,
+      "launch_spec": {
+        "speed": 3.4154833115176926,
+        "angle_deg": 21.079855036021762,
+        "launch_delay": 0.37467846984055897
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.016000000000000014,
+      "reaction_wall_s": 0.0002499,
+      "obs_ready_wall_s": 0.0002078,
+      "flight_time_s": 0.31200000000000017,
+      "launch_spec": {
+        "speed": 2.7590460118225915,
+        "angle_deg": 3.9054979070692966,
+        "launch_delay": 0.7833118232817278
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.014000000000000012,
+      "reaction_wall_s": 0.0001661,
+      "obs_ready_wall_s": 0.0001437,
+      "flight_time_s": 0.28800000000000014,
+      "launch_spec": {
+        "speed": 3.252472445753013,
+        "angle_deg": 5.793241618073239,
+        "launch_delay": 0.22577094241652684
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.0040000000000000036,
+      "reaction_wall_s": 8.9e-05,
+      "obs_ready_wall_s": 4.99e-05,
+      "flight_time_s": 0.28000000000000025,
+      "launch_spec": {
+        "speed": 3.415298758415831,
+        "angle_deg": -8.43473799950561,
+        "launch_delay": 0.5547669111376472
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.020000000000000018,
+      "reaction_wall_s": 0.000237,
+      "obs_ready_wall_s": 0.0002027,
+      "flight_time_s": 0.34200000000000025,
+      "launch_spec": {
+        "speed": 2.2399867175064556,
+        "angle_deg": 5.1566108904136385,
+        "launch_delay": 0.37835614205617774
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.0020000000000000018,
+      "reaction_wall_s": 6.75e-05,
+      "obs_ready_wall_s": 2.78e-05,
+      "flight_time_s": 0.3340000000000002,
+      "launch_spec": {
+        "speed": 2.469024849084421,
+        "angle_deg": -16.540906642437143,
+        "launch_delay": 0.7161071873560594
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.0040000000000000036,
+      "reaction_wall_s": 7e-05,
+      "obs_ready_wall_s": 4.57e-05,
+      "flight_time_s": 0.2900000000000002,
+      "launch_spec": {
+        "speed": 3.2578472185543035,
+        "angle_deg": 11.528888917640828,
+        "launch_delay": 0.27524713876456514
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.014000000000000012,
+      "reaction_wall_s": 0.0001684,
+      "obs_ready_wall_s": 0.0001423,
+      "flight_time_s": 0.3220000000000003,
+      "launch_spec": {
+        "speed": 2.957293000402317,
+        "angle_deg": 29.48758652887549,
+        "launch_delay": 0.5040226050618527
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.019999999999999962,
+      "reaction_wall_s": 0.0002296,
+      "obs_ready_wall_s": 0.0001965,
+      "flight_time_s": 0.2960000000000002,
+      "launch_spec": {
+        "speed": 3.4736117831950035,
+        "angle_deg": -27.57599082638057,
+        "launch_delay": 0.4785592778764792
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.018000000000000016,
+      "reaction_wall_s": 0.0002016,
+      "obs_ready_wall_s": 0.0001753,
+      "flight_time_s": 0.30000000000000027,
+      "launch_spec": {
+        "speed": 2.9728038791003866,
+        "angle_deg": -1.3386858406881537,
+        "launch_delay": 0.6408703312212976
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.008000000000000007,
+      "reaction_wall_s": 0.000105,
+      "obs_ready_wall_s": 7.91e-05,
+      "flight_time_s": 0.2860000000000002,
+      "launch_spec": {
+        "speed": 3.2839907259928927,
+        "angle_deg": 7.936509316173968,
+        "launch_delay": 0.41037961170608517
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.020000000000000018,
+      "reaction_wall_s": 0.0002101,
+      "obs_ready_wall_s": 0.0001863,
+      "flight_time_s": 0.3180000000000002,
+      "launch_spec": {
+        "speed": 2.815613373376669,
+        "angle_deg": 20.484530734784876,
+        "launch_delay": 0.39898125676482354
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.018000000000000016,
+      "reaction_wall_s": 0.00019,
+      "obs_ready_wall_s": 0.0001649,
+      "flight_time_s": 0.28000000000000025,
+      "launch_spec": {
+        "speed": 3.39573921726545,
+        "angle_deg": 0.7462668740437621,
+        "launch_delay": 0.5013342980808264
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.0040000000000000036,
+      "reaction_wall_s": 7.97e-05,
+      "obs_ready_wall_s": 4.6e-05,
+      "flight_time_s": 0.3500000000000003,
+      "launch_spec": {
+        "speed": 2.2304920339284995,
+        "angle_deg": -19.84180194246194,
+        "launch_delay": 0.5948713240722509
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.008000000000000007,
+      "reaction_wall_s": 0.0001088,
+      "obs_ready_wall_s": 7.86e-05,
+      "flight_time_s": 0.3540000000000002,
+      "launch_spec": {
+        "speed": 2.174688519511483,
+        "angle_deg": 20.649214379144254,
+        "launch_delay": 0.21043796917829752
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.01200000000000001,
+      "reaction_wall_s": 0.0001653,
+      "obs_ready_wall_s": 0.0001163,
+      "flight_time_s": 0.3580000000000003,
+      "launch_spec": {
+        "speed": 2.1058671594208374,
+        "angle_deg": -20.947863006614718,
+        "launch_delay": 0.5662960215570284
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.016000000000000014,
+      "reaction_wall_s": 0.0001737,
+      "obs_ready_wall_s": 0.0001516,
+      "flight_time_s": 0.30600000000000027,
+      "launch_spec": {
+        "speed": 3.091832411764528,
+        "angle_deg": -21.470452972306358,
+        "launch_delay": 0.6224673089220174
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.006000000000000005,
+      "reaction_wall_s": 9.67e-05,
+      "obs_ready_wall_s": 6.14e-05,
+      "flight_time_s": 0.29800000000000026,
+      "launch_spec": {
+        "speed": 3.0535070362831704,
+        "angle_deg": 6.22254428792094,
+        "launch_delay": 0.6926883347077945
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.008000000000000007,
+      "reaction_wall_s": 0.0001189,
+      "obs_ready_wall_s": 8e-05,
+      "flight_time_s": 0.3500000000000002,
+      "launch_spec": {
+        "speed": 2.2585546488070403,
+        "angle_deg": 22.615326878199056,
+        "launch_delay": 0.7705143335009297
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.0020000000000000018,
+      "reaction_wall_s": 4.39e-05,
+      "obs_ready_wall_s": 2.3e-05,
+      "flight_time_s": 0.2940000000000002,
+      "launch_spec": {
+        "speed": 3.3125176401107903,
+        "angle_deg": -20.527140857596002,
+        "launch_delay": 0.41627976267885924
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.010000000000000009,
+      "reaction_wall_s": 0.0001209,
+      "obs_ready_wall_s": 9.69e-05,
+      "flight_time_s": 0.2960000000000002,
+      "launch_spec": {
+        "speed": 3.3960344669377536,
+        "angle_deg": 26.253715008115933,
+        "launch_delay": 0.3292833716380093
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.01200000000000001,
+      "reaction_wall_s": 0.000133,
+      "obs_ready_wall_s": 0.0001127,
+      "flight_time_s": 0.2820000000000002,
+      "launch_spec": {
+        "speed": 3.4343605990619146,
+        "angle_deg": 13.926732748665188,
+        "launch_delay": 0.28613258724489804
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.006000000000000005,
+      "reaction_wall_s": 8.12e-05,
+      "obs_ready_wall_s": 5.84e-05,
+      "flight_time_s": 0.30200000000000027,
+      "launch_spec": {
+        "speed": 3.2806123389133766,
+        "angle_deg": -26.575802253831636,
+        "launch_delay": 0.592415912282965
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.010000000000000009,
+      "reaction_wall_s": 0.0001203,
+      "obs_ready_wall_s": 9.44e-05,
+      "flight_time_s": 0.30600000000000027,
+      "launch_spec": {
+        "speed": 2.949223713229292,
+        "angle_deg": -12.125851571846134,
+        "launch_delay": 0.5484331372641926
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.014000000000000012,
+      "reaction_wall_s": 0.0001558,
+      "obs_ready_wall_s": 0.0001295,
+      "flight_time_s": 0.2960000000000002,
+      "launch_spec": {
+        "speed": 3.238028865492681,
+        "angle_deg": -19.46255993320488,
+        "launch_delay": 0.3255873912973486
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.008000000000000007,
+      "reaction_wall_s": 0.0001093,
+      "obs_ready_wall_s": 7.92e-05,
+      "flight_time_s": 0.3140000000000002,
+      "launch_spec": {
+        "speed": 3.0235277948722152,
+        "angle_deg": -26.77073887186664,
+        "launch_delay": 0.31062308641920183
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.010000000000000009,
+      "reaction_wall_s": 0.0001579,
+      "obs_ready_wall_s": 0.0001214,
+      "flight_time_s": 0.29800000000000026,
+      "launch_spec": {
+        "speed": 3.1778796710583768,
+        "angle_deg": 17.15156145157269,
+        "launch_delay": 0.6488358637457392
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.01200000000000001,
+      "reaction_wall_s": 0.00014,
+      "obs_ready_wall_s": 0.0001161,
+      "flight_time_s": 0.2860000000000002,
+      "launch_spec": {
+        "speed": 3.2776242254013095,
+        "angle_deg": -0.38100150267694843,
+        "launch_delay": 0.3077645462525851
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.01200000000000001,
+      "reaction_wall_s": 0.0001731,
+      "obs_ready_wall_s": 0.0001268,
+      "flight_time_s": 0.3700000000000002,
+      "launch_spec": {
+        "speed": 2.009264113952989,
+        "angle_deg": 26.505486444939002,
+        "launch_delay": 0.7874265217456322
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.01200000000000001,
+      "reaction_wall_s": 0.0002985,
+      "obs_ready_wall_s": 0.0002234,
+      "flight_time_s": 0.3560000000000002,
+      "launch_spec": {
+        "speed": 2.09369985160006,
+        "angle_deg": -17.422032594609032,
+        "launch_delay": 0.746034202155746
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.016000000000000014,
+      "reaction_wall_s": 0.00023,
+      "obs_ready_wall_s": 0.0001877,
+      "flight_time_s": 0.3000000000000002,
+      "launch_spec": {
+        "speed": 2.988768951400351,
+        "angle_deg": -1.6730249151087833,
+        "launch_delay": 0.44236036094055425
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.0040000000000000036,
+      "reaction_wall_s": 9.54e-05,
+      "obs_ready_wall_s": 5.28e-05,
+      "flight_time_s": 0.3280000000000002,
+      "launch_spec": {
+        "speed": 2.5764745578244748,
+        "angle_deg": -15.965767295278514,
+        "launch_delay": 0.7355350105358816
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.014000000000000012,
+      "reaction_wall_s": 0.0002004,
+      "obs_ready_wall_s": 0.0001612,
+      "flight_time_s": 0.33000000000000024,
+      "launch_spec": {
+        "speed": 2.6799205943447557,
+        "angle_deg": -25.317969717497036,
+        "launch_delay": 0.44423469243187785
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.010000000000000009,
+      "reaction_wall_s": 0.0001436,
+      "obs_ready_wall_s": 0.0001126,
+      "flight_time_s": 0.3020000000000002,
+      "launch_spec": {
+        "speed": 2.9696952953698004,
+        "angle_deg": 6.06893496084696,
+        "launch_delay": 0.2894254115322908
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.010000000000000009,
+      "reaction_wall_s": 0.0001446,
+      "obs_ready_wall_s": 0.0001121,
+      "flight_time_s": 0.3500000000000002,
+      "launch_spec": {
+        "speed": 2.213901986666808,
+        "angle_deg": 18.279950416089164,
+        "launch_delay": 0.7294229385829829
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.014000000000000012,
+      "reaction_wall_s": 0.0002005,
+      "obs_ready_wall_s": 0.0001566,
+      "flight_time_s": 0.27800000000000025,
+      "launch_spec": {
+        "speed": 3.4627269022829847,
+        "angle_deg": 0.7323190016698646,
+        "launch_delay": 0.545738260518126
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.010000000000000009,
+      "reaction_wall_s": 0.0001641,
+      "obs_ready_wall_s": 0.000119,
+      "flight_time_s": 0.27800000000000025,
+      "launch_spec": {
+        "speed": 3.4527087259745572,
+        "angle_deg": 0.25577319423723566,
+        "launch_delay": 0.6680712131404121
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.006000000000000005,
+      "reaction_wall_s": 0.000134,
+      "obs_ready_wall_s": 8.35e-05,
+      "flight_time_s": 0.31200000000000017,
+      "launch_spec": {
+        "speed": 2.8223486097333055,
+        "angle_deg": -13.155060034991827,
+        "launch_delay": 0.7922717106897936
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.016000000000000014,
+      "reaction_wall_s": 0.0002482,
+      "obs_ready_wall_s": 0.0001987,
+      "flight_time_s": 0.35800000000000026,
+      "launch_spec": {
+        "speed": 2.1911630313798995,
+        "angle_deg": -25.786533426221304,
+        "launch_delay": 0.4230105768398711
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.0040000000000000036,
+      "reaction_wall_s": 7.97e-05,
+      "obs_ready_wall_s": 4.99e-05,
+      "flight_time_s": 0.29000000000000026,
+      "launch_spec": {
+        "speed": 3.287273077349343,
+        "angle_deg": -13.497255334142956,
+        "launch_delay": 0.5751931790061999
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.016000000000000014,
+      "reaction_wall_s": 0.0002152,
+      "obs_ready_wall_s": 0.0001758,
+      "flight_time_s": 0.31200000000000017,
+      "launch_spec": {
+        "speed": 2.8596802765890814,
+        "angle_deg": 17.125236630236905,
+        "launch_delay": 0.7630504730586527
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.013999999999999985,
+      "reaction_wall_s": 0.0001959,
+      "obs_ready_wall_s": 0.0001549,
+      "flight_time_s": 0.3200000000000002,
+      "launch_spec": {
+        "speed": 2.625143753053794,
+        "angle_deg": 4.684278915154593,
+        "launch_delay": 0.24445888936512344
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.006000000000000005,
+      "reaction_wall_s": 0.0001017,
+      "obs_ready_wall_s": 6.81e-05,
+      "flight_time_s": 0.3000000000000002,
+      "launch_spec": {
+        "speed": 3.00143007490336,
+        "angle_deg": 7.281108326785116,
+        "launch_delay": 0.33391168092813117
+      }
+    },
+    {
+      "success": true,
+      "outcome": "caught",
+      "false_trigger": false,
+      "reaction_sim_s": 0.010000000000000009,
+      "reaction_wall_s": 0.0001423,
+      "obs_ready_wall_s": 0.0001084,
+      "flight_time_s": 0.3160000000000002,
+      "launch_spec": {
+        "speed": 3.1044447610821324,
+        "angle_deg": 29.841795234347764,
+        "launch_delay": 0.30869439056935044
+      }
+    }
+  ]
+}
