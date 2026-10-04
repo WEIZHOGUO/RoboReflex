@@ -26,17 +26,21 @@ class DualPathEnv(gym.Wrapper):
     """step(action=None)：忽略外部动作，内部走 传感→裁判→推理(mux)→执行 闭环。"""
 
     def __init__(self, env: gym.Env, slow_path, fast_path,
-                 arbiter: Arbiter | None = None):
+                 arbiter: Arbiter | None = None,
+                 deadline_s: float | None = None):
         super().__init__(env)
         self.slow_path = slow_path
         self.fast_path = fast_path
         self.arbiter = arbiter or Arbiter(ArbiterConfig())
+        # 决策死线（M4.5）：每步 传感+裁判+推理 墙钟耗时超 deadline_s → 该步零动作
+        self.deadline_s = deadline_s
         self._obs = None
         self._last_cmd = 0.0
         self._handover_start = -math.inf
         self._handover_window = 0.0
         self._handover_from = 0.0
         self._ledger: dict = {}
+        self._decision_ns: list[int] = []
         self._sources: list[str] = []  # 每步指令来源："slow"/"fast"/"blend"（mux 排他验证用）
 
     @property
@@ -52,7 +56,9 @@ class DualPathEnv(gym.Wrapper):
         self._handover_start = -math.inf
         self._handover_window = 0.0
         self._ledger = {"sense_ns": 0, "arbiter_ns": 0, "inference_ns": 0,
-                        "exec_ns": 0, "settle_ns": 0, "n_steps": 0}
+                        "exec_ns": 0, "settle_ns": 0, "n_steps": 0,
+                        "timeout_steps": 0}
+        self._decision_ns = []
         self._sources = []
         return obs, info
 
@@ -96,6 +102,14 @@ class DualPathEnv(gym.Wrapper):
         t3 = time.perf_counter_ns()
         led["inference_ns"] += t3 - t2
 
+        # ---- 决策死线：传感+裁判+推理 总墙钟超 deadline → 该步零动作 ----
+        decision_ns = t3 - t0
+        self._decision_ns.append(decision_ns)
+        if self.deadline_s is not None and decision_ns / 1e9 > self.deadline_s:
+            cmd = 0.0
+            src = src + "|timeout"
+            led["timeout_steps"] += 1
+
         # ---- 执行段：物理步进 ----
         obs, reward, terminated, truncated, info = self.env.step(
             np.array([cmd], dtype=np.float64))
@@ -126,6 +140,15 @@ class DualPathEnv(gym.Wrapper):
                     "settle_ms": led["settle_ns"] / 1e6,
                     "n_steps": led["n_steps"],
                 }
+                if self.deadline_s is not None and self._decision_ns:
+                    arr = np.asarray(self._decision_ns)
+                    events["deadline"] = {
+                        "deadline_s": self.deadline_s,
+                        "timeout_steps": led["timeout_steps"],
+                        "timeout_frac": led["timeout_steps"] / max(led["n_steps"], 1),
+                        "decision_ms_p50": float(np.percentile(arr, 50) / 1e6),
+                        "decision_ms_p99": float(np.percentile(arr, 99) / 1e6),
+                    }
                 events["switch_sequence"] = self._sources
         led["settle_ns"] += time.perf_counter_ns() - t4
         return obs, reward, terminated, truncated, info

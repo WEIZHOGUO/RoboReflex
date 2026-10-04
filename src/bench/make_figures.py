@@ -173,6 +173,71 @@ def fig_latency_profile(v2, out_dir):
     _save(fig, out_dir, "fig_latency_profile")
 
 
+def _gaussian_kde(values, grid, bw):
+    """numpy 手写高斯 KDE（避免引入 scipy 依赖）。"""
+    v = np.asarray(values, dtype=np.float64)[:, None]
+    g = np.asarray(grid, dtype=np.float64)[None, :]
+    return np.exp(-0.5 * ((g - v) / bw) ** 2).mean(axis=0) / (bw * np.sqrt(2 * np.pi))
+
+
+def fig_compare_v3(v2, multiseed, out_dir):
+    """终版主图：KDE 延迟剖面 + 误差棒柱状图 + 环境/样本量标注。"""
+    colors = ["#4C72B0", "#DD8452", "#55A868", "#C44E52"]
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(13, 4.6))
+
+    # 左：KDE 延迟剖面（直方图升级为折线密度，双通路红线在 10ms 处应又尖又高）
+    grid = np.linspace(0, 80, 400)
+    for r, c in zip(v2, colors):
+        lat = [t["reaction_sim_s"] * 1e3 for t in r["trials"]
+               if t.get("reaction_sim_s") is not None]
+        if lat:
+            ax1.plot(grid, _gaussian_kde(lat, grid, bw=2.0), color=c,
+                     lw=2, label=r["label"])
+    ax1.set_xlabel("reaction latency (ms, sim time)")
+    ax1.set_ylabel("density (KDE, bw=2ms)")
+    ax1.set_title("Reaction latency profile (stim -> first valid action)")
+    ax1.legend()
+    ax1.grid(alpha=0.3)
+
+    # 右：成功率 + 误触发率，误差棒（双通路=5 种子 mean±std；其余单种子）
+    ms_agg = (multiseed or {}).get("aggregate", {})
+    x = np.arange(len(v2))
+    width = 0.36
+    for k, (key, offset) in enumerate((("success_rate", -1),
+                                       ("false_trigger_rate", +1))):
+        vals, errs = [], []
+        for r in v2:
+            vals.append(r["summary"][key])
+            if r["label"] == "dual-path" and ms_agg:
+                errs.append(ms_agg[key]["std"])
+            else:
+                errs.append(0.0)
+        bars = ax2.bar(x + offset * width / 2, vals, width, yerr=errs,
+                       capsize=4, color=colors,
+                       alpha=0.9 if k == 0 else 0.45,
+                       hatch="" if k == 0 else "//",
+                       label=key.replace("_", " "))
+        for b, v, e, r in zip(bars, vals, errs, v2):
+            note = f"{v:.2f}"
+            if r["label"] == "dual-path" and ms_agg:
+                note += "\n±0*" if e == 0.0 else f"\n±{e:.2f}"
+            ax2.text(b.get_x() + b.get_width() / 2, b.get_height() + 0.03,
+                     note, ha="center", va="bottom", fontsize=8)
+    ax2.set_xticks(x, [r["label"] for r in v2], fontsize=9)
+    ax2.set_ylim(0, 1.35)
+    ax2.set_title("Success rate vs false trigger rate")
+    ax2.legend(loc="upper center", fontsize=9)
+    ax2.grid(alpha=0.3, axis="y")
+
+    foot = ("n=200 trials/group · MuJoCo 3.14, 500Hz physics / 50Hz control, "
+            "Windows 11 · error bars: mean±std over 5 training seeds "
+            "(dual-path); other groups single-seed · *±0: identical across "
+            "seeds (50Hz control quantizes latency to 20ms steps)")
+    fig.text(0.5, 0.01, foot, ha="center", fontsize=7.5, color="gray")
+    fig.tight_layout(rect=(0, 0.04, 1, 1))
+    _save(fig, out_dir, "fig_compare_v3")
+
+
 def fig_alpha_evolution(meta, out_dir):
     logs = meta["alpha_log_per_env"]
     fig, ax = plt.subplots(figsize=(7, 4))
@@ -211,6 +276,8 @@ def main():
         fig_speed(data, out_dir)
     if v2:
         fig_latency_profile(v2, out_dir)
+        ms = _load(ASSETS / "multiseed.json")
+        fig_compare_v3(v2, ms, out_dir)
     meta = _load(PROJECT_ROOT / "runs" / "ppo_alpha" / "train_meta.json")
     if meta and meta.get("alpha_log_per_env"):
         fig_alpha_evolution(meta, out_dir)

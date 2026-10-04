@@ -14,22 +14,22 @@ Here are our three core strengths:
 
 ## Experiments
 
-Empirical data shows: while maintaining a 100% success rate, the dual-pathway architecture reduces the false trigger rate from 96%+ (PPO baselines) to 0%, while pushing valid reflex latency under 20ms.
+Empirical data shows: while maintaining a 100% success rate, the dual-pathway architecture reduces the false trigger rate from 96%+ (PPO baselines) to 0%, while pushing valid reflex latency under 20ms. Under a hard 20ms decision deadline, a slow 5Hz planner alone collapses to 49.5% success while RoboReflex dual-pathway stays at 100% (full-loop decision ~2ms, 10x margin).
 
-![Four-group benchmark](assets/bench_compare_v2.png)
+![Benchmark with error bars and KDE latency profile](assets/paper/fig_compare_v3.png)
 
 ## Comparison Demo
 
 Left: vanilla RL (no latency constraint) — slow tail and constant fidgeting (false trigger rate 0.97).
 Right: RoboReflex dual-pathway — cruises when safe, catches on stimulus (false trigger rate 0.00), latency tail 54ms→20ms.
 
-| Vanilla RL | RoboReflex |
-|---|---|
-| ![PPO baseline](assets/idle_ppo_annotated.gif) | ![RoboReflex dual-pathway](assets/idle_dualpath_annotated.gif) |
+![RoboReflex vs vanilla RL — split screen, same stimulus](assets/hero_compare.gif)
+
+*Split screen, same stimulus: vanilla PPO (left) fidgets when idle and reacts at 238ms; RoboReflex (right) cruises calmly and fires at 18ms. Slow-mo replay at the end.*
 
 Four-group benchmark (handcrafted baseline / PPO λ=0 / PPO α-dynamic / RoboReflex dual-pathway):
 
-![Four-group benchmark](assets/bench_compare_v2.png)
+![Benchmark with error bars and KDE latency profile](assets/paper/fig_compare_v3.png)
 
 ## Quick Start
 

@@ -75,16 +75,19 @@ class AlphaController:
 class AlphaLatencyWrapper(gym.Wrapper):
     """把环境的 ±1 终局奖励替换为 REWARD.md 的延迟感知奖励。
 
-    终局步：R = (1 if caught else -1) − α·clip(t_response/t_window, 0, max_ratio)
+    终局步：R = (1 if success else -1) − α·clip(t_response/t_window, 0, max_ratio)
     每步：  R -= β·|a_t − a_{t-1}| / v_max   （防抖振，系数小）
+    空闲期（球未发射）：R -= idle_β·max(0, |a|−a_thresh)/v_max
+                       （M4.5 奖励工程对照组：试图用奖励压误触发）
     """
 
     def __init__(self, env: gym.Env, controller: AlphaController | None = None,
                  beta: float = 0.01, max_ratio: float = 2.0,
-                 success_outcome: str = "caught"):
+                 success_outcome: str = "caught", idle_beta: float = 0.0):
         super().__init__(env)
         self.controller = controller or AlphaController()
         self.beta = float(beta)
+        self.idle_beta = float(idle_beta)
         self.max_ratio = float(max_ratio)
         # 成功终局名：catch 场景 "caught"，dodge 场景 "dodged"
         self.success_outcome = str(success_outcome)
@@ -119,11 +122,17 @@ class AlphaLatencyWrapper(gym.Wrapper):
 
     def step(self, action):
         a = float(np.asarray(action, dtype=np.float64).reshape(1)[0])
+        launched_before = self.env.ball_launched
         obs, reward, terminated, truncated, info = self.env.step(action)
 
         # 防抖振：动作变化率惩罚（每步）
         rate_penalty = self.beta * abs(a - self._prev_action) / self.env.v_max
         self._prev_action = a
+
+        # 空闲期动作惩罚（奖励工程对照组）：无球期动作超阈值部分扣分
+        if self.idle_beta > 0.0 and not launched_before:
+            excess = max(0.0, abs(a) - self.env.action_threshold)
+            rate_penalty += self.idle_beta * excess / self.env.v_max
 
         if terminated:
             events = info.get("events", {})

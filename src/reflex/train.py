@@ -29,9 +29,11 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 def build_vec_env(seed: int, n_envs: int, alpha_mode: str, beta: float,
                   controller_kwargs: dict | None = None,
                   scenario_path: str | None = None,
-                  alpha_fixed: float = 0.5) -> VecNormalize:
+                  alpha_fixed: float = 0.5,
+                  idle_beta: float = 0.0) -> VecNormalize:
     """alpha_mode: 'dynamic' -> α 闭环更新；'off' -> α=0（B 组）；
-    'fixed' -> α 固定为 alpha_fixed（C 组消融档）。"""
+    'fixed' -> α 固定为 alpha_fixed（C 组消融档）。
+    idle_beta > 0 开启空闲期动作惩罚（M4.5 奖励工程对照组）。"""
     ck = dict(controller_kwargs or {})
 
     def make(rank):
@@ -46,7 +48,7 @@ def build_vec_env(seed: int, n_envs: int, alpha_mode: str, beta: float,
             success_outcome = "dodged" if env.mode == "dodge" else "caught"
             return Monitor(AlphaLatencyWrapper(
                 env, controller=controller, beta=beta,
-                success_outcome=success_outcome))
+                success_outcome=success_outcome, idle_beta=idle_beta))
         return _init
 
     venv = DummyVecEnv([make(r) for r in range(n_envs)])
@@ -89,6 +91,8 @@ def main():
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--n-envs", type=int, default=4)
     ap.add_argument("--beta", type=float, default=0.01, help="action rate penalty coef")
+    ap.add_argument("--idle-penalty", type=float, default=0.0,
+                    help="idle-period action penalty coef (M4.5 reward-engineering ablation)")
     ap.add_argument("--out", default=None, help="output dir (default runs/ppo_<mode>)")
     ap.add_argument("--report-freq", type=int, default=50_000)
     args = ap.parse_args()
@@ -100,7 +104,8 @@ def main():
           f"seed={args.seed} out={out}", flush=True)
 
     venv = build_vec_env(args.seed, args.n_envs, args.alpha_mode, args.beta,
-                         scenario_path=args.scenario, alpha_fixed=args.alpha_fixed)
+                         scenario_path=args.scenario, alpha_fixed=args.alpha_fixed,
+                         idle_beta=args.idle_penalty)
     model = PPO(
         "MlpPolicy", venv,
         learning_rate=3e-4, n_steps=1024, batch_size=512, n_epochs=10,
