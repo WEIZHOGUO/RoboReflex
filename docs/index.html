@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RoboReflex — Reflex as a first-class trainable object</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0d1117; color: #e6edf3; font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.7; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 60px 24px; }
+  .hero { text-align: center; padding: 40px 0 30px; }
+  .hero h1 { font-size: 3em; background: linear-gradient(90deg, #8a76ff, #4A8DF6); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero .tag { color: #9aa3bd; margin-top: 12px; font-size: 1.15em; }
+  .hero .motto { color: #e6edf3; margin-top: 20px; font-size: 1.3em; font-weight: 600; }
+  img.demo { width: 100%; border-radius: 12px; border: 1px solid #232b3a; margin: 30px 0; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin: 36px 0; }
+  .card { background: #161b27; border: 1px solid #232b3a; border-radius: 14px; padding: 22px; }
+  .card h3 { color: #8a76ff; font-size: 1.05em; margin-bottom: 8px; }
+  .card p { color: #9aa3bd; font-size: .93em; }
+  table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: .92em; }
+  th, td { padding: 10px 12px; border-bottom: 1px solid #232b3a; text-align: center; }
+  th { color: #8a76ff; }
+  td.hl { color: #7ee787; font-weight: 700; }
+  td { color: #c7c9d4; }
+  .btn { display: inline-block; background: linear-gradient(90deg, #6D5DF6, #4A8DF6); color: #fff; padding: 13px 34px; border-radius: 999px; text-decoration: none; font-weight: 700; margin: 8px 8px 8px 0; }
+  .btn.ghost { background: none; border: 1px solid #6D5DF6; color: #a99bff; }
+  .center { text-align: center; }
+  h2 { margin: 44px 0 16px; color: #e6edf3; }
+  .note { color: #5b6480; font-size: .88em; margin-top: 50px; text-align: center; }
+  code { background: #161b27; padding: 2px 8px; border-radius: 6px; color: #a99bff; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <h1>RoboReflex（机映）</h1>
+    <div class="motto">The foundation for robots to integrate into human life.</div>
+    <div class="tag">Reflex as a first-class trainable object — stimulus injection × latency-constrained training × millisecond measurement</div>
+    <div style="margin-top:26px">
+      <a class="btn" href="https://github.com/WEIZHOGUO/RoboReflex">GitHub ↗</a>
+      <a class="btn ghost" href="#bench">Benchmarks</a>
+    </div>
+  </div>
+
+  <img class="demo" src="https://raw.githubusercontent.com/WEIZHOGUO/RoboReflex/main/assets/hero_compare.gif" alt="RoboReflex vs vanilla RL">
+
+  <div class="cards">
+    <div class="card"><h3>Dual-pathway hard decoupling</h3><p>Fast reflex and slow planning are strictly independent modules with an arbiter — no shared weights.</p></div>
+    <div class="card"><h3>Latency-native metrics</h3><p>p50 / p95 / p99 latency profiles, false-trigger rate, five-segment timing ledger. Others report success rates; we report delay distributions.</p></div>
+    <div class="card"><h3>Take it with you</h3><p>Trained reflexes export to ONNX (+ static-C reference for hard RT) — no platform lock-in.</p></div>
+  </div>
+
+  <h2 id="bench">Benchmarks</h2>
+  <table>
+    <tr><th>Method</th><th>Success</th><th>False-trigger</th><th>Latency p95</th></tr>
+    <tr><td>Handcrafted baseline</td><td>100%</td><td>0.00</td><td>20 ms</td></tr>
+    <tr><td>PPO (λ=0)</td><td>100%</td><td>0.97</td><td>54.4 ms</td></tr>
+    <tr><td>PPO (α-dynamic)</td><td>100%</td><td>0.96</td><td>20 ms</td></tr>
+    <tr><td><b>RoboReflex dual-pathway</b></td><td class="hl">100%</td><td class="hl">0.00</td><td class="hl">20 ms</td></tr>
+  </table>
+  <p style="color:#9aa3bd;font-size:.93em">Under a hard 20 ms decision deadline, a 5 Hz planner alone collapses to <b>49.5%</b> success while RoboReflex dual-pathway stays at <b>100%</b> (full-loop decision ≈ 2 ms — 10× margin). n=200 trials/group, MuJoCo 3.14, 500 Hz physics / 50 Hz control, 5 seeds.</p>
+
+  <h2>Quick Start</h2>
+  <p><code>pip install -r requirements.txt && python src/demo.py --viewer</code></p>
+  <p style="color:#9aa3bd;margin-top:8px">Windows / Linux · pure pip · no ROS. New scenario = one YAML file.</p>
+
+  <p class="note">Honest note: no physical robots here — all metrics are from simulation, dual-tracked (logical + wall-clock).<br>Apache-2.0 © 2026 WEIZHOGUO</p>
+</div>
+</body>
+</html>
