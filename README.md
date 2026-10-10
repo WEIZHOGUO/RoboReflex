@@ -20,6 +20,10 @@ Empirical data shows: while maintaining a 100% success rate, the dual-pathway ar
 
 ### ReflexSuite-mini: does it hold beyond one task?
 
+| Ball catch | Whack-a-mole | Rolling ball |
+|---|---|---|
+| ![ball catch](assets/demo_rs_ball_catch.gif) | ![whack-a-mole](assets/demo_rs_whack_a_mole.gif) | ![rolling ball](assets/demo_rs_rolling_ball.gif) |
+
 Three more reaction tasks (ball catch, whack-a-mole, rolling-ball interception — task design follows ReflexBench), 200 trials each, same architecture, no per-task retuning:
 
 | Task | System | Success | False trigger | p50 / p95 latency |
@@ -74,6 +78,7 @@ Windows / Linux, pure pip install, no ROS dependency.
 
 - Architecture & design: `docs/ARCHITECTURE.md`
 - Adaptive reward (α-dynamic): `docs/REWARD.md`
+- Roadmap: `ROADMAP.md`
 
 ## Disclaimer
 

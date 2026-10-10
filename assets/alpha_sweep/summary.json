@@ -1,0 +1,94 @@
+{
+  "sorted": [
+    {
+      "group": "C_update_rule",
+      "mode": "dynamic",
+      "eff_step": 146040,
+      "final_sr": 1.0,
+      "p95_ms": 20.000000000000018,
+      "p50_ms": 10.000000000000009,
+      "alpha_end": 0.0,
+      "alpha_curve": {
+        "alpha@25%": 0.0,
+        "alpha@50%": 0.0,
+        "alpha@75%": 0.0,
+        "alpha@100%": 0.0
+      }
+    },
+    {
+      "group": "E_pid",
+      "mode": "pid",
+      "eff_step": 146040,
+      "final_sr": 1.0,
+      "p95_ms": 20.000000000000018,
+      "p50_ms": 11.999999999999982,
+      "alpha_end": 0.08404997912139855,
+      "alpha_curve": {
+        "alpha@25%": 0.053,
+        "alpha@50%": 0.062,
+        "alpha@75%": 0.073,
+        "alpha@100%": 0.084
+      }
+    },
+    {
+      "group": "A_lambda0",
+      "mode": "off",
+      "eff_step": 146376,
+      "final_sr": 1.0,
+      "p95_ms": 20.000000000000018,
+      "p50_ms": 11.999999999999982,
+      "alpha_end": 0.0,
+      "alpha_curve": {
+        "alpha@25%": 0.0,
+        "alpha@50%": 0.0,
+        "alpha@75%": 0.0,
+        "alpha@100%": 0.0
+      }
+    },
+    {
+      "group": "D_ema",
+      "mode": "ema",
+      "eff_step": 146376,
+      "final_sr": 1.0,
+      "p95_ms": 20.000000000000018,
+      "p50_ms": 11.999999999999982,
+      "alpha_end": 0.0,
+      "alpha_curve": {
+        "alpha@25%": 0.0,
+        "alpha@50%": 0.0,
+        "alpha@75%": 0.0,
+        "alpha@100%": 0.0
+      }
+    },
+    {
+      "group": "F_four_factor",
+      "mode": "four",
+      "eff_step": 146376,
+      "final_sr": 1.0,
+      "p95_ms": 20.000000000000018,
+      "p50_ms": 11.999999999999982,
+      "alpha_end": 0.0,
+      "alpha_curve": {
+        "alpha@25%": 0.0,
+        "alpha@50%": 0.0,
+        "alpha@75%": 0.0,
+        "alpha@100%": 0.0
+      }
+    },
+    {
+      "group": "B_fixed1.0",
+      "mode": "fixed",
+      "eff_step": 146400,
+      "final_sr": 1.0,
+      "p95_ms": 20.000000000000018,
+      "p50_ms": 10.999999999999996,
+      "alpha_end": 1.0,
+      "alpha_curve": {
+        "alpha@25%": 1.0,
+        "alpha@50%": 1.0,
+        "alpha@75%": 1.0,
+        "alpha@100%": 1.0
+      }
+    }
+  ]
+}
