@@ -1,0 +1,19 @@
+# ReflexSuite-mini 任务二：打地鼠（Whack-a-Mole，ReflexBench 语义复刻）
+# 地鼠在随机位置探出，存活时间极短（这就是"反应关键"），限时内击中为胜。
+name: reflexsuite_whack_a_mole
+env: whack_mole
+
+mole:
+  delay_range: [0.2, 0.8]       # 复位后地鼠探头延迟（秒），测"无目标期误触发"
+  alive_range: [0.35, 0.60]     # 探头存活时间（秒）：短时窗=反应关键
+  x_range: [-0.8, 0.8]          # 探头位置 x（米）
+  z_up: 0.10                    # 探头时地鼠中心高度（与挡板同层，接触即击中）
+  z_down: -0.50                 # 缩回时沉到地板下（不可接触）
+
+paddle:
+  max_speed: 6.0
+  x_limit: 0.95
+
+max_episode_time: 4.0
+false_trigger_threshold: 0.02
+action_threshold: 0.1

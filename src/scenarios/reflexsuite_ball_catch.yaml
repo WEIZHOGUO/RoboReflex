@@ -1,0 +1,24 @@
+# ReflexSuite-mini 任务一：接球（Ball Catching，ReflexBench 语义复刻）
+# 相对 ball_catch_easy 的升级：发球位置/速度分布全面拉宽（随机高度+更宽
+# 落点+更高初速），逼近 ReflexBench "随机位置/速度抛出、落地前接住" 的描述。
+# 口径不变：50Hz 控制 / 500Hz 物理，与机映其他场景一致。
+name: reflexsuite_ball_catch
+env: paddle_catch
+
+launch:
+  delay_range: [0.2, 0.8]       # 复位后延迟发球时间窗口（秒）
+  speed_range: [2.5, 4.5]       # 初速（m/s），比 easy 档更快
+  angle_range: [-45, 45]        # 水平角度（度），更宽的落点分布
+  spawn_height: 1.5             # 兼容字段（被 spawn_height_range 覆盖）
+  spawn_height_range: [1.2, 1.8]  # 发球高度随机（米）
+  spawn_x_range: [-0.6, 0.6]    # 发球点 x 随机偏移（米）
+
+paddle:
+  max_speed: 6.0
+  x_limit: 0.95
+
+catch_height: 0.17
+fail_z: 0.03
+max_episode_time: 6.0
+false_trigger_threshold: 0.02
+action_threshold: 0.1

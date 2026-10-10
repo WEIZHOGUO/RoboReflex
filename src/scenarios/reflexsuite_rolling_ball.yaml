@@ -1,0 +1,21 @@
+# ReflexSuite-mini 任务三：滚球拦截（Rolling Ball Interception，ReflexBench 语义复刻）
+# 球贴地滚向挡板线（y=0），带随机 x 起点/横向速度分量，挡板横向卡位拦截。
+# 注意：球全程接触地板滚动，终局判定不能用"球-地板接触"（那是接球场景的失败口径）。
+name: reflexsuite_rolling_ball
+env: rolling_ball
+
+roll:
+  delay_range: [0.2, 0.8]       # 复位后放球延迟（秒）
+  speed_range: [2.0, 3.5]       # 滚向挡板线的速度（m/s，沿 -y）
+  vx_range: [-0.8, 0.8]         # 横向速度分量（m/s）
+  spawn_x_range: [-0.8, 0.8]    # 放球点 x（米）
+  spawn_y: 2.0                  # 放球点 y（米，距挡板线的纵深）
+
+paddle:
+  max_speed: 6.0
+  x_limit: 0.95
+
+pass_y: -0.50                   # 球心 y 低于此值=越过挡板线，拦截失败
+max_episode_time: 6.0
+false_trigger_threshold: 0.02
+action_threshold: 0.1

@@ -18,6 +18,26 @@ Empirical data shows: while maintaining a 100% success rate, the dual-pathway ar
 
 ![Benchmark with error bars and KDE latency profile](assets/paper/fig_compare_v3.png)
 
+### ReflexSuite-mini: does it hold beyond one task?
+
+Three more reaction tasks (ball catch, whack-a-mole, rolling-ball interception — task design follows ReflexBench), 200 trials each, same architecture, no per-task retuning:
+
+| Task | System | Success | False trigger | p50 / p95 latency |
+|---|---|---|---|---|
+| Ball catch | handcrafted | .980 | 0 | 10 / 20 ms |
+| | PPO α-dynamic | .985 | **.950** | 11 / 20 ms |
+| | dual-pathway | .980 | **0** | 10 / 20 ms |
+| Whack-a-mole | handcrafted | 1.000 | 0 | 12 / 20 ms |
+| | PPO α-dynamic | 1.000 | **1.000** | 10 / 20 ms |
+| | dual-pathway | 1.000 | **0** | 10 / 20 ms |
+| Rolling ball | handcrafted | .980 | 0 | 10 / 20 ms |
+| | PPO α-dynamic | .995 | **.990** | 12 / 32 ms |
+| | dual-pathway | .995 | **0** | 12 / 32 ms |
+
+Same story three times: end-to-end PPO matches on success rate but fires on nearly every idle period. The dual-pathway keeps its hands still at zero cost to success or latency. The handcrafted baseline gets FTR 0 by construction — the point is that a *learned* policy reaches that discipline without reward engineering.
+
+Raw data: `assets/reflexsuite_bench.json` · Table: `assets/reflexsuite_results.md` · Reproduce: `python -m src.bench.reflexsuite_bench --trials 200`
+
 ## Comparison Demo
 
 Left: vanilla RL (no latency constraint) — slow tail and constant fidgeting (false trigger rate 0.97).
