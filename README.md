@@ -78,6 +78,7 @@ Windows / Linux, pure pip install, no ROS dependency.
 
 - Architecture & design: `docs/ARCHITECTURE.md`
 - Adaptive reward (α-dynamic): `docs/REWARD.md`
+- False triggers, the metric nobody was measuring: `docs/false-trigger.md`
 - Roadmap: `ROADMAP.md`
 
 ## Disclaimer
